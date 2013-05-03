@@ -2,6 +2,7 @@
   "name": "donotdisturb",
   "version": "0.0.0",
   "dependencies": {
-    "flat-ui": "latest"
+    "flat-ui": "latest",
+    "jquery": "~2.0.0"
   }
 }
