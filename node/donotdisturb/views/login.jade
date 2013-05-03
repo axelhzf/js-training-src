@@ -1,0 +1,18 @@
+extends layout
+
+block content
+
+    form(method='POST', action='/login')
+        .login-screen
+            .login-icon
+                img(src="/components/flat-ui/images/illustrations/time.png")
+            .login-form
+                h4 Welcome to Do Not Disturb
+                .control-group
+                    input(name="username", type='text', placeholder='username', class='login-field')
+                    label(class='login-field-icon fui-man-16')
+                .control-group
+                    input(name="password", type='password', placeholder='password', class='login-field')
+                    label(class='login-field-icon fui-lock-16')
+                button(type='submit', class='btn btn-primary btn-large')
+                    | Sign in
