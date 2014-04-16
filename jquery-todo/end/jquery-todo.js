@@ -6,7 +6,7 @@
   var $input = $("input[type=text]");
 
   function addTask (task) {
-    $tbody.append("<tr><td><input type='checkbox'></td><td>" + task + "</td><td><a class='delete' href='#'>Delete</a></td></tr>");
+    $tbody.append("<tr><td><input type='checkbox'></td><td>" + task + "</td><td><a class='delete' href='#'><i class='fa fa-trash-o'></i></a></td></tr>");
   }
 
   $form.on("submit", function (e) {
