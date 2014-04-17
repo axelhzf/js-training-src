@@ -1,0 +1,32 @@
+body {
+    background-color: #F9EFE8;
+    font-size: 20px;
+    font-family: Helvetica Neue, Helvetica, Arial,serif;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+a {
+    color: #fff;
+}
+
+.carousel {
+    width: 600px;
+    height: 400px;
+    margin: auto;
+
+}
+
+.carousel-inner {
+
+}
+
+.carousel img {
+    display: block;
+    width: 600px;
+    height: 400px;
+    float: left;
+}
