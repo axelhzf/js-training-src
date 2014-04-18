@@ -1,0 +1,60 @@
+body {
+    background-color: #F9EFE8;
+    font-size: 20px;
+    font-family: Helvetica Neue, Helvetica, Arial;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+a {
+    color: #fff;
+}
+
+.todo-app {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.todo-list {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+tbody tr {
+    background-color: #ED5C60;
+    color: #fff;
+}
+
+tr.completed {
+    background-color: #49DCC9;
+    color: #fff;
+}
+
+
+tbody td {
+    padding: 5px 0;
+}
+
+td:first-child, td:last-child {
+    width: 30px;
+}
+
+form {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px
+}
+
+form input {
+    border: 0;
+    width: 100%;
+    font-size: 20px;
+}
