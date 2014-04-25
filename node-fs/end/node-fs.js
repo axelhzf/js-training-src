@@ -9,7 +9,7 @@ exports.getFileSizes = function (directory, cb) {
 
     function readFileSize () {
       if (files.length === 0) {
-        result = _.sortBy(result, "name");
+        result = _.sortBy(result, "file");
         cb(err, result);
         return;
       }
