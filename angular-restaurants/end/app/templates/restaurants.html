@@ -1,0 +1,28 @@
+<div class="col-md-2">
+    <ul class="restaurants-list">
+        <li ng-repeat="restaurant in restaurants">
+            <a href="#restaurants/{{restaurant.id}}">{{restaurant.name}}</a>
+        </li>
+    </ul>
+</div>
+<div class="col-md-10">
+    <div ng-if="activeRestaurant">
+        <h1>{{activeRestaurant.name}}</h1>
+        <p>{{activeRestaurant.description}}</p>
+
+        <google-map center="activeRestaurant.coords" zoom="16" class="map">
+            <marker coords="activeRestaurant.coords"></marker>
+        </google-map>
+
+        <carousel interval="3000" class="gallery">
+            <slide ng-repeat="image in activeRestaurant.images" active="slide.active">
+                <img ng-src="{{image}}" style="margin:auto;">
+            </slide>
+        </carousel>
+    </div>
+    <div ng-if="!activeRestaurant">
+        Select a restaurant
+    </div>
+</div>
+
+
