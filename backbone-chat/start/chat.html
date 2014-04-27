@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>TLP2k12 Chat Example</title>
+    <link rel="stylesheet" href="assets/less/main.css" type="text/css" media="screen">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="users">
+        <div class="users-inner"></div>
+    </div>
+    <div class="center">
+        <div class="conversation"></div>
+        <div class="input">
+            <div class="input-inner">
+                <input id="data" type="text"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="vendor/jquery-1.7.2.js"></script>
+<script src="vendor/underscore.js"></script>
+<script src="vendor/backbone.js"></script>
+<script src="vendor/socket.io.js"></script>
+<script src="vendor/handlebars-1.0.0.beta.6.js"></script>
+<script src="vendor/moment.js"></script>
+
+<script type="text/html" id="usersTmpl">
+    {{#each users}}
+        <div class="user">{{name}}</div>
+    {{/each}}}
+</script>
+
+<script type="text/html" id="msgTmpl">
+    <div class="chat-bubble other">
+        <div class="chat-bubble-glare">
+            <div class="chat-bubble-glare-inner"></div>
+        </div>
+        <p><strong>{{username}}</strong> <small>({{ timestamp }})</small><p>
+        <p>{{{ msg }}}</p>
+        <div class="chat-bubble-arrow-border"></div>
+        <div class="chat-bubble-arrow"></div>
+    </div>
+</script>
+
+<script src="src/MessagesView.js"></script>
+<script src="src/UsersView.js"></script>
+<script src="src/InputView.js"></script>
+<script src="src/Message.js"></script>
+
+<script>
+    var App = App || {};
+
+    //Model
+    App.Config = Backbone.Model.extend({
+        defaults : {
+            username : "username"
+        }
+    });
+    App.Users = Backbone.Collection.extend();
+    App.Messages = Backbone.Collection.extend({
+        model : App.Message
+    });
+
+    //Initialize
+    App.config = new App.Config();
+    App.users = new App.Users();
+    App.messages = new App.Messages({});
+
+    App.usersView = new App.UsersView({collection : App.users, el : ".users-inner"});
+    App.messagesView = new App.MessagesView({collection : App.messages, el : ".conversation", config : App.config});
+    App.inputView = new App.InputView({el : ".input"});
+</script>
+
+
+</body>
+</html>
