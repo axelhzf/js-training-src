@@ -1,0 +1,12 @@
+{
+  "name": "ng-restaurants",
+  "dependencies": {
+    "underscore": "~1.6.0",
+    "jquery": "~2.1.0",
+    "angular": "~1.2.15",
+    "highcharts": "3.0.7"
+  },
+  "resolutions": {
+    "underscore": "~1.6.0"
+  }
+}
