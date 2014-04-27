@@ -1,0 +1,42 @@
+body {
+    background-color: #5A4080;
+}
+
+a {
+    color: #5A4080;
+}
+
+.container {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.angular-google-map-container {
+    height: 200px;
+}
+
+.restaurants-list {
+    list-style: none;
+    padding: 0;
+}
+
+.restaurants-list a {
+    display: block;
+    padding: 5px;
+    border-left: 2px solid #fff;
+}
+
+.restaurants-list a:hover {
+    border-left: 2px solid #5A4080;
+}
+
+a{
+    cursor: pointer;
+}
+
+.gallery img {
+    width: auto;
+    height: 225px;
+    max-height: 225px;
+}
