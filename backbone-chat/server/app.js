@@ -27,7 +27,7 @@ app.get('/', routes.index);
 
 var usernames = {};
 
-var connectionString = process.env.DATABASE_URL || 'tcp://postgres:axel@localhost/postgres';
+var connectionString = process.env.DATABASE_URL || 'tcp://axelhzf@localhost/postgres';
 var client = new pg.Client(connectionString);
 client.connect();
 

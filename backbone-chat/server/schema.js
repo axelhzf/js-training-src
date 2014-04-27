@@ -1,5 +1,5 @@
 var pg = require('pg')
-  , connectionString = process.env.DATABASE_URL || 'tcp://postgres:axel@localhost/postgres'
+  , connectionString = process.env.DATABASE_URL || 'tcp://axelhzf@localhost/postgres'
   , client
   , query;
 
