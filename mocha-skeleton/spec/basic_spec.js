@@ -1,7 +1,0 @@
-describe("", function () {
-
-    it("", function () {
-        
-    });
-
-});
